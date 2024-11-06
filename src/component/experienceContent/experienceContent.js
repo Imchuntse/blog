@@ -19,9 +19,7 @@ const LineContainer = ({left,right,color='white'}) =>{
 
 const ExContent = ()=>{
 
-    const skillsStore = {
-        skills:['Communication', 'Problem Solving', 'Teamwork', 'Sales Management','Multitasking']
-    }
+
     const fullstackSkills = {
         skills: ['React', 'Python','Swift', 'TypeScript', 'JavaScript','MongoDB', 'NodeJS','Flask']
     }
@@ -31,27 +29,6 @@ const ExContent = ()=>{
 
     return(
         <div>
-            
-            <LineContainer left={'Aussie Family Mart'} right={'May 2024 - Aug 2024'}/>
-
-
-            <LineContainer left={'Store Cashier'} right={'Melbourne, VIC'} color='#0FFF9D'/>
-
-            <AnimatedDiv>
-            <div className='rubik-normal exp-font-size'>In this role, I restocked shelves, assisted customers with product inquiries, operated the cash register, and processed transactions.</div>
-            </AnimatedDiv>
-            <AnimatedDiv>
-            <div className="exp-grid-skill">
-                {skillsStore.skills.map((i, s) => (
-                    <SkillContainer key={s}>
-                        {i}
-                    </SkillContainer>
-                ))}
-            </div>
-            </AnimatedDiv>
-            
-            <div className="exp-line"></div>
-            
             
             <LineContainer left={'Fillmula Inc - Internship'} right={"Dec 2021 - Jul 2022 "}/>
             

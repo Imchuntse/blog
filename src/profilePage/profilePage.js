@@ -44,7 +44,7 @@ function ProfilePage(){
         cursor: 'pointer',  // 让图标和文字部分显示点击手型
         alignItems: 'center',  // 保证图标和文字对齐
     };
-    const email = "chuntsexj@gmail.com"
+    const email = "chun_junxie@outlook.com"
     const navStyle = {
         position: 'fixed', // 固定在页面左侧
         top: '0', // 距离顶部0
@@ -95,6 +95,12 @@ function ProfilePage(){
             offset: clickOffset // 点击时的偏移量
         });
     };
+    const handleContact = () => {
+        window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: 'smooth' // 平滑滚动
+        })
+    }
     useEffect(() => {
         const handleScroll = () => {
             const sections = ['intro','about', 'project', 'experience', 'contact'];
@@ -174,7 +180,7 @@ function ProfilePage(){
                         Experience
                     </Link>
                 </div>
-                <div style={selected === 'contact' ? selectedMenuItemStyle : menuItemStyle} onClick={() => handleClick('contact')}>
+                <div style={selected === 'contact' ? selectedMenuItemStyle : menuItemStyle} onClick={() => handleContact('contact')}>
                     <Link
                         className="rubik-normal"
                         to="contact"
@@ -202,11 +208,11 @@ function ProfilePage(){
                 <SectionTitle title={'Project'} lineDir={'left'} />
                 <ProjectContent/>
             </Element>
-            <Element name="experience" id="experience" style={sectionStyle}>
+            <Element name="experience" id="experience" style={{width: '100%', boxSizing: 'border-box',}}>
                 <SectionTitle title={'Experience'} lineDir={'right'} /> 
                 <ExContent/>
             </Element>
-            <Element name="contact" id="contact" style={{...sectionStyle,marginBottom:'300px'}}>
+            <Element name="contact" id="contact" style={{display:'flex', height:'100vh',alignItems:'center',justifyContent:'center',flexDirection:'column'}}>
                 
                 <AnimatedDiv width="100%">
                 <div className='archivo-black-regular'style={{fontSize:'4.5rem', justifyContent:'center', display:'flex'}}>

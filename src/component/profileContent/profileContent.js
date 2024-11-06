@@ -2,6 +2,7 @@ import React from "react";
 import AnimatedDiv from "../animatedComponent";
 import { ContactButton } from "../buttonComponent";
 import './profileContent.css'
+
 const Title = () => {
 
     return (

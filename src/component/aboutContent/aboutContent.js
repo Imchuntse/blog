@@ -3,7 +3,7 @@ import AnimatedDiv from "../animatedComponent";
 import codeIcon from '../icons/code-solid.svg'
 import schoolIcon from '../icons/school-solid.svg'
 import './aboutContent.css'
-import { width } from "@fortawesome/free-solid-svg-icons/fa0";
+
 const AboutDescription = () =>{
 
     return (

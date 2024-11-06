@@ -26,12 +26,10 @@ const ButtonStyle = ({children,style, onClick}) => {
 }
 const ContactButton = () => {
     const scrollToContact = () => {
-        scroller.scrollTo('contact', {
-            duration: 500,
-            delay: 0,
-            smooth: 'easeInOut',
-            offset: -100 // Adjust offset if necessary
-        });
+        window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: 'smooth' // 平滑滚动
+        })
     };
 
     return (
